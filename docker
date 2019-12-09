@@ -1,0 +1,8 @@
+1、多网卡linux，获取真实ip地址
+   InetAddress.getLocalHost()，使用该方法会获取第一个地址，如果linux注册过docker，那么有可能获取docker的虚拟网卡，此网卡是不可用的。
+   如果是docker容器内的服务，获取网卡时，也有可能获取一个不可用的网卡，此时解决办法如下：
+   设置本机名称：hostname mName     xxx最好不是写IP地址的形式，若写则必须是本机的完全IP形式(不要只写一半)；
+   在/etc/hosts里加一行 本机IP mName；
+   用InetAddress.getLocalHost().getHostAddress()测试一下结果是否是与本机IP一致 
+   
+   此办法亲测可用！！！

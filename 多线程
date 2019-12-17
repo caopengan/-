@@ -8,3 +8,5 @@
   该锁还支持获取锁时的公平和非公平性选择。“公平”是指“不同的线程获取锁的机制是公平的”，而“不公平”是指“不同的线程获取锁的机制是非公平的”。
   被使用：ThreadPoolExecutor使用可重入锁
   精彩博文：https://www.cnblogs.com/gxyandwmm/p/9387833.html
+##1、volatile(关键字)
+   《深入理解Java虚拟机》12章java内存模型，讲解的很清楚
